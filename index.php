@@ -46,7 +46,7 @@
     	<div class="header">
     	<h1>Вход</h1>
     	<span>Пожалуйста, введите логин и пароль, предоставленный администратором.</span>
-		<h2><?php echo $err; ?></h2>
+        <h2><?php if (isset($err)){ echo $err;} ?></h2>
     	</div>
 
     	<div class="content">

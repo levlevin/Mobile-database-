@@ -48,7 +48,7 @@
 	//Check whether the query was successful or not
 	if(mysql_num_rows($result) == 1) {
 		while($row = mysql_fetch_assoc($result)) {
-			$_SESSION['UID'] = $row['UID'];
+			/*$_SESSION['UID'] = $row['UID'];*/
 			$_SESSION['USERNAME'] = $username;
 			$_SESSION['TYPE'] = $row['Type'];
 			session_write_close();
