@@ -1,6 +1,6 @@
 <?php
 	include("sql.php"); //Connect to SQL
-
+	
 	session_start(); //Start session for writing
 
 	function Fix($str) { //Clean the fields

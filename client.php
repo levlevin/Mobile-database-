@@ -1,4 +1,5 @@
-<?php include("/php/auth.php"); ?>
+<?php include("/php/auth.php"); 
+if ($_SESSION['TYPE'] != 'client') {header("location: php/log.php");}?>
 <!doctype html>
 <html>
 	<head>
@@ -14,11 +15,11 @@
 	<body>
 
 <div class="menu-top">
-	<a href="/client.php">&laquo; Домой</a>  		
+	<a href="#new">&laquo; Домой</a>  		
   <span class="right">
         
 	  <ul class="vert-nav">
-  				<li class="current"><a href="#" style="width: 90%; height: 100%; display: block;"><?php echo $_SESSION['TYPE']; ?></a>
+  				<li class="current"><a href="#" style="width: 90%; height: 100%; display: block;"><?php echo $_SESSION['USERNAME']; ?></a>
     				<ul>
       					<li class="exit"><a href="php/logout.php" style="width: 90%; height: 100%; display: block;">Выйти</a></li>
     				</ul>

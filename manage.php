@@ -1,4 +1,5 @@
-<?php include("/php/auth.php"); ?>
+<?php include("/php/auth.php"); 
+if ($_SESSION['TYPE'] != 'manager') {header("location: php/log.php");}?>
 <!doctype html>
 <html>
 	<head>
@@ -14,7 +15,7 @@
 	<body>
 
 <div class="menu-top">
-	<a href="/manage.html">&laquo; Домой</a>  		
+	<a href="#new">&laquo; Домой</a>  		
   <span class="right">
         
 	  <ul class="vert-nav">
