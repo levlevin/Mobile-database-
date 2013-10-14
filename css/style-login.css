@@ -42,6 +42,16 @@ LOGIN FORM
 	margin-bottom: 10px;
 }
 
+.login-form .header h2 {
+	font-family: Helvetica, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height:20px;
+	color: #ee4e1d;
+	text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+	/*margin-bottom: 10px;*/
+}
+
 .login-form .header span {
 	font-size: 11px;
 	line-height: 16px;

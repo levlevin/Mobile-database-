@@ -1,3 +1,14 @@
+<?php
+	session_start();
+	if(isset($_SESSION['ERRMSG']) && is_array($_SESSION['ERRMSG']) && count($_SESSION['ERRMSG']) >0 ) {
+		$err = "<table>";
+		foreach($_SESSION['ERRMSG'] as $msg) {
+			$err .= "<tr><td>" . $msg . "</td></tr>"; 
+		}
+		$err .= "</table>";
+		unset($_SESSION['ERRMSG']);
+	}
+?>
 <!doctype html>
 <html>
 	<head>
@@ -13,14 +24,14 @@
 	<body>
 
 <div class="menu-top">
-	<a href="index.html">&laquo; Домой</a>  		
+	<a href="/index.php">&laquo; Домой</a>  		
   <span class="right">
         
 	  <ul class="vert-nav">
   				<li class="current"><a href="#" style="width: 90%; height: 100%; display: block;">Мой аккаунт</a>
-    				<ul>
-      					<li class="exit"><a href="#" style="width: 90%; height: 100%; display: block;">Выйти</a></li>
-    				</ul>
+    				<!--<ul>
+      					<li class="exit"><a href="/php/logout.php" style="width: 90%; height: 100%; display: block;">Выйти</a></li>
+    				</ul>-->
   				</li>
 			</ul>
 
@@ -30,16 +41,17 @@
 
 	<div id="wrapper">
 
-	<form name="login-form" class="login-form" action="php/check.php" method="post">
+	<form name="login-form" class="login-form" action="/php/log.php" method="post">
 
     	<div class="header">
     	<h1>Вход</h1>
     	<span>Пожалуйста, введите логин и пароль, предоставленный администратором.</span>
+		<h2><?php echo $err; ?></h2>
     	</div>
 
     	<div class="content">
-		<input name="myusername" type="text" class="input content" placeholder="Логин" />
-    	<input name="mypassword" type="password" class="input password" placeholder="Пароль" />
+		<input name="username" type="text" class="input content" placeholder="Логин" />
+    	<input name="password" type="password" class="input password" placeholder="Пароль" />
     	</div>
 
     	<div class="footer">

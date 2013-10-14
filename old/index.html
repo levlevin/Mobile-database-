@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+    
+	<meta charset="UTF-8">
+	<title>Login</title>
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/style-login.css" rel="stylesheet" type="text/css" />
+    
+    
+	</head>
+	<body>
+
+<div class="menu-top">
+	<a href="index.html">&laquo; Домой</a>  		
+  <span class="right">
+        
+	  <ul class="vert-nav">
+  				<li class="current"><a href="#" style="width: 90%; height: 100%; display: block;">Мой аккаунт</a>
+    				<ul>
+      					<li class="exit"><a href="/?action=out" style="width: 90%; height: 100%; display: block;">Выйти</a></li>
+    				</ul>
+  				</li>
+			</ul>
+
+    		</span> 
+    	</div>
+
+
+	<div id="wrapper">
+
+	<form name="login-form" class="login-form" action="php/check.php" method="post">
+
+    	<div class="header">
+    	<h1>Вход</h1>
+    	<span>Пожалуйста, введите логин и пароль, предоставленный администратором.</span>
+    	</div>
+
+    	<div class="content">
+		<input name="login" type="text" class="input content" placeholder="Логин" />
+    	<input name="password" type="password" class="input password" placeholder="Пароль" />
+    	</div>
+
+    	<div class="footer">
+    	<input type="submit" name="submit" value="Войти" class="button" />
+		<input type="button"  value="Забыли?" onclick="#dialog" class="forgot" /> 
+    	</div>
+	</form>
+
+
+	</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    	<script  src="js/sliding.js"></script>
+
+	</body>
+</html>
